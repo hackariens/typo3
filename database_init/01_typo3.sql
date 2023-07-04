@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS `typo3_bdd`;
+CREATE USER IF NOT EXISTS 'typo3'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON `typo3_bdd`.* TO 'typo3'@'%';

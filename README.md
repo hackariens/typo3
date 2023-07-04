@@ -1,13 +1,13 @@
-# Welcome to @hackariens/github 👋
+# Welcome to @hackariens/typo3 👋
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 ![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/hackariens/github/graphs/commit-activity)
-![Continuous Integration](https://github.com/hackariens/github/workflows/ci/badge.svg?branch=develop)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/hackariens/typo3/graphs/commit-activity)
+![Continuous Integration](https://github.com/hackariens/typo3/workflows/ci/badge.svg?branch=develop)
 
 > Template de nouveau repository
 
-## 🏠 [Homepage](https://github.com/hackariens/github#readme)
+## 🏠 [Homepage](https://github.com/hackariens/typo3#readme)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 ![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)
@@ -22,8 +22,8 @@ Software:
 ## Download
 
 ```sh
-git clone --recurse-submodules git@github.com:hackariens/github.git github
-cd github
+git clone --recurse-submodules git@github.com:hackariens/typo3.git
+cd typo3
 ```
 
 ## Environnment
@@ -55,9 +55,9 @@ npm run exec
 
 Contributions, issues and feature requests are welcome!
 Feel free to check
-[issues page](https://github.com/hackariens/github/issues).
+[issues page](https://github.com/hackariens/typo3/issues).
 You can also take a look at the
-[contributing guide](https://github.com/hackariens/github/blob/develop/CONTRIBUTING.md).
+[contributing guide](https://github.com/hackariens/typo3/blob/develop/CONTRIBUTING.md).
 
 ## Show your support
 
@@ -68,7 +68,7 @@ Give a ⭐️ if this project helped you!
 Copyright © 2019 [koromerzhin](https://github.com/koromerzhin).
 
 This project is
-[MIT](https://github.com/hackariens/github/blob/develop/LICENSE) licensed.
+[MIT](https://github.com/hackariens/typo3/blob/develop/LICENSE) licensed.
 
 ## ✨ Contributors
 

@@ -3,7 +3,23 @@
   "version": "1.0.0",
   "description": "Template de nouveau repository",
   "scripts": {
-    "lint:markdown": "markdownlint README.md"
+    "bash:phpfpm": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) bash",
+    "bdd:mariadb": "korojscommands bddset-mariadb",
+    "cmd:validate_outdated": "npm-run-all composer:validate composer:outdated",
+    "create:apps": "docker container run -v $(pwd)/:/var/www --user $(id -u):$(id -g) $(npx korojscommands docker_get-image --key phpfpm) composer create-project symfony/skeleton:\"6.2.*\" apps --no-interaction",
+    "composer:fund": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer fund",
+    "composer:install:dev": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer install --no-progress --prefer-dist --optimize-autoloader",
+    "composer:install:prod": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer install --no-progress --prefer-dist --optimize-autoloader --no-dev",
+    "composer:install": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer install",
+    "composer:outdated": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer outdated",
+    "composer:suggests": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer suggests --by-suggestion",
+    "composer:update": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer update",
+    "composer:validate": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer validate",
+    "docker:deploy": "korojscommands docker_deploy",
+    "docker:getpull-image": "korojscommands docker_getpull-image",
+    "docker:ls": "korojscommands docker_ls",
+    "docker:waiting": "korojscommands docker_waiting --status running --container apache phpfpm",
+    "exec": "npm-run-all bdd:mariadb docker:getpull-image docker:deploy docker:waiting docker:ls"
   },
   "repository": {
     "type": "git",
