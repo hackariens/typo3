@@ -6,7 +6,7 @@
     "bash:phpfpm": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) bash",
     "bdd:mariadb": "korojscommands bddset-mariadb",
     "cmd:validate_outdated": "npm-run-all composer:validate composer:outdated",
-    "create:apps": "docker container run -v $(pwd)/:/var/www --user $(id -u):$(id -g) $(npx korojscommands docker_get-image --key phpfpm) composer create-project symfony/skeleton:\"6.2.*\" apps --no-interaction",
+    "create:apps": "docker container run -v $(pwd)/:/var/www --user $(id -u):$(id -g) $(npx korojscommands docker_get-image --key phpfpm) composer create-project typo3/cms-base-distribution:^12 apps --no-interaction",
     "composer:fund": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer fund",
     "composer:install:dev": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer install --no-progress --prefer-dist --optimize-autoloader",
     "composer:install:prod": "docker exec -ti $(npx korojscommands docker_getname-container --container phpfpm) composer install --no-progress --prefer-dist --optimize-autoloader --no-dev",
