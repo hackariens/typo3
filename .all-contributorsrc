@@ -1,5 +1,5 @@
 {
-  "projectName": "github",
+  "projectName": "typo3",
   "projectOwner": "hackariens",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -20,50 +20,6 @@
       "profile": "https://github.com/koromerzhin",
       "contributions": [
         "code"
-      ]
-    },
-    {
-      "login": "renovate[bot]",
-      "name": "renovate[bot]",
-      "avatar_url": "https://avatars.githubusercontent.com/in/2740?v=4",
-      "profile": "https://github.com/apps/renovate",
-      "contributions": [
-        "bug",
-        "code",
-        "maintenance"
-      ]
-    },
-    {
-      "login": "dependabot[bot]",
-      "name": "dependabot[bot]",
-      "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
-      "profile": "https://github.com/apps/dependabot",
-      "contributions": [
-        "bug",
-        "code",
-        "maintenance"
-      ]
-    },
-    {
-      "login": "restyled-io[bot]",
-      "name": "restyled-io[bot]",
-      "avatar_url": "https://avatars.githubusercontent.com/in/5851?v=4",
-      "profile": "https://github.com/apps/restyled-io",
-      "contributions": [
-        "bug",
-        "code",
-        "maintenance"
-      ]
-    },
-    {
-      "login": "mend-bolt-for-github[bot]",
-      "name": "mend-bolt-for-github[bot]",
-      "avatar_url": "https://avatars.githubusercontent.com/in/16809?v=4",
-      "profile": "https://github.com/apps/mend-bolt-for-github",
-      "contributions": [
-        "bug",
-        "code",
-        "maintenance"
       ]
     }
   ]
