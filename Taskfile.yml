@@ -109,7 +109,7 @@ tasks:
     desc: "Installation initiale de Composer et des dépendances"
     silent: true
     cmds:
-    - docker run --rm -v $(pwd)/apps:/var/www -w /var/www koromerzhin/php:8.2.0-apache symfony composer install
+    - docker run --rm -v $(pwd)/apps:/var/www -w /var/www koromerzhin/php:8.2.0-apache composer install
 
   typo3:waiting:
     desc: "Attend que les services soient opérationnels"
