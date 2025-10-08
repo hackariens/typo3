@@ -45,6 +45,7 @@ tasks:
   help:
     desc: "Affiche l'aide détaillée"
     aliases: [ h ]
+    silent: true
     cmds:
     - task: default
 
@@ -61,7 +62,7 @@ tasks:
     silent: true
     cmds:
     - rm -rf ./conf/apache2 || true
-    - docker create --name typo3-php koromerzhin/php:8.2.0-apache 
+    - docker create --name typo3-php koromerzhin/php:8.2.0-apache
     - mkdir -p ./conf/apache2
     - docker cp typo3-php:/etc/apache2/sites-available/000-default.conf ./conf/apache2/000-default.conf
     - docker cp typo3-php:/etc/apache2/apache2.conf ./conf/apache2/apache2.conf
@@ -87,6 +88,7 @@ tasks:
       vars:
         SOURCE_FILE: ./{{.FOLDERSQL}}/{{.FILESQL}}
         DEST_DIR: "{{.FOLDERLAMPY}}/mariadb_init/"
+        FORCE: true
 
   typo3:getpull-image:
     desc: "Télécharge les images Docker définies dans le docker-compose.yml"
@@ -138,15 +140,9 @@ tasks:
     - task: typo3:waiting
     - task: typo3:ls
 
-  typo3:download-phar:
-    desc: "Télécharger les différents fichiers phar"
-    cmds:
-    - task: download:php:tools
-      vars:
-        TOOLS_DIR: ./../apps
-
   typo3:bash:
     desc: "Ouvre un shell bash dans le conteneur www"
+    silent: true
     cmds:
     - task: docker:stack:shell
       vars:
