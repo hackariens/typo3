@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 ![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/hackariens/typo3/graphs/commit-activity)
-![Continuous Integration](https://github.com/hackariens/typo3/workflows/ci/badge.svg?branch=develop)
+![Continuous Integration](https://github.com/hackariens/typo3/actions/workflows/ci.yml/badge.svg?branch=develop)
 
 > Template de nouveau repository
 
@@ -17,12 +17,14 @@
 
 Software:
 
-- npm
+- [task](https://taskfile.dev/)
+- [nodejs](https://nodejs.org/)
+- [lampy](https://github.com/koromerzhin/lampy)
 
 ## Download
 
 ```sh
-git clone --recurse-submodules git@github.com:hackariens/typo3.git
+git clone --recursive git@github.com:hackariens/typo3.git
 cd typo3
 ```
 
@@ -30,16 +32,16 @@ cd typo3
 
 Edit .env with .env.example
 
-## Install
+## Create apps
 
 ```sh
-npm install
+task create:apps
 ```
 
 ## Launch
 
 ``` sh
-npm run exec
+task typo3:exec
 ```
 
 ## Author
