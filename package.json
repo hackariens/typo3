@@ -1,9 +1,8 @@
 {
   "name": "@hackariens/github",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Template de nouveau repository",
   "scripts": {
-    "create:apps": "docker container run -v $(pwd)/:/var/www --user $(id -u):$(id -g) $(npx korojscommands docker_get-image --key phpfpm) composer create-project typo3/cms-base-distribution:^12 apps --no-interaction",
     "lint:markdown": "markdownlint README.md",
     "release": "release-it"
   },
